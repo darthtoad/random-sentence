@@ -1,9 +1,10 @@
+const apiKey = require('./../.env').apiKey;
 
 $(document).ready(function(){
   setInterval(() => {
     let noun = new Promise(function(resolve, reject) {
        let request = new XMLHttpRequest();
-       let url = `http://api.wordnik.com/v4/words.json/randomWord?includePartOfSpeech=noun&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5`;
+       let url = `http://api.wordnik.com/v4/words.json/randomWord?includePartOfSpeech=noun&api_key=${apiKey}`;
        request.onload = function() {
          if (this.status === 200) {
            resolve(request.response);
@@ -26,7 +27,7 @@ $(document).ready(function(){
   setInterval(() => {
     let verb = new Promise(function(resolve, reject) {
        let request = new XMLHttpRequest();
-       let url = `http://api.wordnik.com/v4/words.json/randomWord?includePartOfSpeech=verb&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5`;
+       let url = `http://api.wordnik.com/v4/words.json/randomWord?includePartOfSpeech=verb&api_key=${apiKey}`;
        request.onload = function() {
          if (this.status === 200) {
            resolve(request.response);
@@ -50,7 +51,7 @@ $(document).ready(function(){
   setInterval(() => {
     let noun2 = new Promise(function(resolve, reject) {
        let request = new XMLHttpRequest();
-       let url = `http://api.wordnik.com/v4/words.json/randomWord?includePartOfSpeech=noun&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5`;
+       let url = `http://api.wordnik.com/v4/words.json/randomWord?includePartOfSpeech=noun&api_key=${apiKey}`;
        request.onload = function() {
          if (this.status === 200) {
            resolve(request.response);
